@@ -1,14 +1,14 @@
 # 🚆 Bangladesh Railway E-Ticketing System — QA Test Suite & Quality Assurance Documentation
 
-[![QA Status](https://img.shields.io/badge/QA%20Status-Passed%20(98.67%25)-success?style=for-the-badge&logo=checkmarx)](https://eticket.railway.gov.bd)
-[![Total Test Cases](https://img.shields.io/badge/Total%20Test%20Cases-232-blue?style=for-the-badge&logo=testrail)](#-test-execution-summary--metrics)
-[![Execution Rate](https://img.shields.io/badge/Execution%20Rate-96.98%25-informational?style=for-the-badge)](#-test-execution-summary--metrics)
+[![QA Status](https://img.shields.io/badge/QA%20Status-Passed%20(99.56%25)-success?style=for-the-badge&logo=checkmarx)](https://eticket.railway.gov.bd)
+[![Total Test Cases](https://img.shields.io/badge/Total%20Test%20Cases-225-blue?style=for-the-badge&logo=testrail)](#-test-execution-summary--metrics)
+[![Execution Rate](https://img.shields.io/badge/Execution%20Rate-100%25-informational?style=for-the-badge)](#-test-execution-summary--metrics)
 [![Target Platform](https://img.shields.io/badge/Target-eticket.railway.gov.bd-orange?style=for-the-badge&logo=googlechrome)](https://eticket.railway.gov.bd)
 [![Tested By](https://img.shields.io/badge/SQA%20Engineer-Tanzim%20Rahman-darkgreen?style=for-the-badge&logo=github)](https://github.com/TanzimSQA)
 
 A comprehensive, industry-standard Software Quality Assurance (SQA) test documentation suite for the **Bangladesh Railway E-Ticketing System** ([eticket.railway.gov.bd](https://eticket.railway.gov.bd)).
 
-This repository contains full lifecycle testing artifacts including an **IEEE 829 Test Plan**, **System Mind Map**, **232 Manual Test Cases**, **Bug Reports with Severity/Priority Triage**, **Traceability & Test Matrices**, and **Executive Test Metrics**.
+This repository contains full lifecycle testing artifacts including an **IEEE 829 Test Plan**, **System Mind Map**, **225 Manual Test Cases**, **Defect Card Report with Severity/Priority Triage**, **Traceability & Test Matrices**, and **Executive Test Metrics**.
 
 ---
 
@@ -104,18 +104,18 @@ All test cases were executed and measured against predefined entry and exit crit
 ├──────────────────────────┬──────────┬─────────────────────────┤
 │ Metric                   │ Count    │ Percentage              │
 ├──────────────────────────┼──────────┼─────────────────────────┤
-│ Total Test Cases Written │ 232      │ 100.00 %                │
-│ Test Cases Executed      │ 225      │  96.98 %                │
-│ Test Cases Not Executed  │   7      │   3.02 % (Out of Scope) │
+│ Total Test Cases Written │ 225      │ 100.00 %                │
+│ Test Cases Executed      │ 225      │ 100.00 %                │
+│ Test Cases Not Executed  │   0      │   0.00 %                │
 ├──────────────────────────┼──────────┼─────────────────────────┤
-│ Passed Test Cases        │ 222      │  98.67 % (of Executed)  │
-│ Failed Test Cases (Bugs) │   3      │   1.33 % (of Executed)  │
+│ Passed Test Cases        │ 224      │  99.56 %                │
+│ Failed Test Cases (Bugs) │   1      │   0.44 %                │
 │ Blocked Test Cases       │   0      │   0.00 %                │
 └──────────────────────────┴──────────┴─────────────────────────┘
 ```
 
-> **Execution Rate**: **96.98%** (225 / 232 executed).  
-> **Pass Rate**: **98.67%** of executed test scenarios successfully passed.
+> **Execution Rate**: **100%** (225 / 225 executed).  
+> **Pass Rate**: **99.56%** (224 / 225 test cases successfully passed).
 
 ---
 
@@ -124,29 +124,52 @@ All test cases were executed and measured against predefined entry and exit crit
 | Module / Feature Area | Total Test Cases | Primary Testing Focus |
 |---|:---:|---|
 | **Train Information & Schedule** | 149 | Route availability, train number lookup, stops & timing accuracy |
-| **Mobile Number Input** | 11 | Format validation, digit length, BD prefix rules, boundary checks |
-| **UI & Layout / Navigation** | 17 | Logo display, navigation bar redirects, responsive cards, placeholders |
 | **Registration Module** | 20 | Full Name, Password, NID, Date of Birth, Verification button |
-| **Authentication / Login** | 4 | Credential validation, session entry, error prompts |
-| **Security & reCAPTCHA** | 4 | Bot prevention, submission blocking without captcha |
+| **UI & Layout / Navigation** | 17 | Logo display, navigation bar redirects, responsive cards, placeholders |
+| **Mobile Number Input** | 11 | Format validation, digit length, BD prefix rules, boundary checks |
 | **Train Search & Station Selection** | 7 | Origin/Destination dropdowns, same-station error, date selection |
 | **Refund & Helpline Support** | 5 | Gateway shortcode displays, dial link functionality, layout |
-| **Reserved / Out of Scope** | 7 | Additional boundary & non-functional placeholders (TC-226 to 232) |
-| **Total** | **232** | |
+| **Authentication / Login** | 4 | Credential validation, session entry, error prompts |
+| **Security & reCAPTCHA** | 4 | Bot prevention, submission blocking without captcha |
+| **NID Verification** | 3 | National ID formatting, validation rules, error handling |
+| **Form Validation** | 1 | Required fields & submission integrity |
+| **Choose Class** | 1 | Coach class selection & berth tier mapping |
+| **Total** | **225** | **100% Executed** |
 
 ---
 
 ## 🐞 Defect Tracking & Bug Report
 
-Five defects were documented, triaged, and tracked during test execution:
+Active defects are logged and triaged in the standardized bug report:
 
-| Bug ID | Test Case ID | Module | Defect Summary / Steps | Severity | Priority | Status |
-|:---:|:---:|---|---|:---:|:---:|:---:|
-| `BUG_01` | **TC-070** | Registration & Submit | **Blank form bypasses validation**: Form submits and redirects to next page when Full Name, Mobile, and NID are blank and reCAPTCHA is unchecked. | **Critical** | **High** | `Open` |
-| `BUG_02` | **TC-005** | From Station | **Missing empty-state feedback**: Dropdown displays no "Station not found" prompt when an invalid station name (`XYZStation123`) is typed. | **Medium** | **Medium** | `Open` |
-| `BUG_03` | **TC-007** | Station Selection | **Sticky validation modal**: Same station validation error modal persists on the screen even after changing the destination station; requires full page reload. | **Medium** | **Medium** | `In Review` |
-| `BUG_04` | **TC-222** | Refund Support | **Missing `tel:` URI protocol**: bKash helpline number `16247` is rendered as plain text without clickable `tel:` anchor integration on mobile view. | **Low** | **Low** | `Open` |
-| `BUG_05` | **TC-225** | Refund Support | **Label formatting misalignment**: Upay helpline number label text wraps awkwardly, breaking table row height consistency. | **Low** | **Low** | `Resolved` |
+### Defect Details: BUG_01
+
+| Field | Detail |
+|---|---|
+| **Bug ID** | `BUG_01` (Related: **TC-070**) |
+| **Module** | Registration — Submit Button |
+| **Environment** | Production ([https://eticket.railway.gov.bd](https://eticket.railway.gov.bd/register)) |
+| **Severity** | **Critical** (Blocker / Critical) |
+| **Priority** | **High** |
+| **Status** | **Open** |
+| **Assigned To** | Dev Team Lead |
+| **Responsible QA** | Tanzim Rahman |
+| **Reported Date** | 26/08/2026 |
+
+#### Issue Description
+Form submits successfully and redirects to the next page when all required fields are left blank.
+
+#### Steps to Reproduce
+1. Open Registration page: `https://eticket.railway.gov.bd/register`
+2. Leave **Full Name**, **Mobile Number**, and **NID** fields blank.
+3. Leave **reCAPTCHA** unchecked.
+4. Click the **'Verify'** button.
+
+#### Expected Result
+System displays validation error prompts for all required fields and prevents form submission.
+
+#### Actual Result
+Form accepts blank input data, bypasses captcha validation, and redirects to the next page.
 
 ---
 
@@ -159,11 +182,11 @@ All deliverables are bundled in the repository workbook:
 Bangladesh_Railway_Cases_Final_CardStyle.xlsx
 ├── 📄 Sheet 1: Test Plan          # IEEE 829 Compliant Test Strategy & Scope
 ├── 📄 Sheet 2: Mind Map           # Visual System Architecture & Flow Diagram
-├── 📄 Sheet 3: Test Cases         # 232 Formatted Card-Style Test Cases
-├── 📄 Sheet 4: Bug Report         # Detailed Defect Logs with Steps & Severity
-├── 📄 Sheet 5: Test Matrix        # Execution %, Defect Metrics & Formulas
-├── 📄 Sheet 6: Test Case Report   # Executive Sign-Off & Status Overview
-└── 📄 Sheet 7: Test Metrics       # High-Level Testing Metric Summaries
+├── 📄 Sheet 3: Test Cases         # 225 Formatted Card-Style Test Cases
+├── 📄 Sheet 4: Bug Report         # Standardized Defect Card Logs & Reproduction Steps
+├── 📄 Sheet 5: Test Matrix        # Execution %, Defect Metrics & Quality KPIs
+├── 📄 Sheet 6: Test Case Report   # Executive Sign-Off & Status Overview (224 Pass / 1 Fail)
+└── 📄 Sheet 7: Test Metrics       # High-Level Execution Summary (99.56% Pass Rate)
 ```
 
 ---
@@ -182,7 +205,7 @@ Bangladesh_Railway_Cases_Final_CardStyle.xlsx
      - Check **Test Plan** for governance, entry/exit criteria, and suspension conditions.
      - Review **Mind Map** for the end-to-end component mapping.
      - Browse **Test Cases** to examine test scenarios, test steps, test data, and actual vs expected results.
-     - Inspect **Bug Report** to see how defects were documented with reproduction steps.
+     - Inspect **Bug Report** to review active defect details, severity triage, and steps to reproduce.
 
 ---
 
