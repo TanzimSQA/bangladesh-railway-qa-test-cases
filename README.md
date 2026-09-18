@@ -175,11 +175,11 @@ Form accepts blank input data, bypasses captcha validation, and redirects to the
 
 ## 📑 Test Deliverables Structure
 
-All deliverables are bundled in the repository workbook:  
-[`Bangladesh_Railway_Cases_Final_CardStyle.xlsx`](./Bangladesh_Railway_Cases_Final_CardStyle.xlsx)
+The testing deliverables are available in the updated repository workbook:  
+[`Bangladesh_Railway_Test_Cases, Upadated.xlsx`](./Bangladesh_Railway_Test_Cases,%20Upadated.xlsx)
 
 ```
-Bangladesh_Railway_Cases_Final_CardStyle.xlsx
+Bangladesh_Railway_Test_Cases, Upadated.xlsx
 ├── 📄 Sheet 1: Test Plan          # IEEE 829 Compliant Test Strategy & Scope
 ├── 📄 Sheet 2: Mind Map           # Visual System Architecture & Flow Diagram
 ├── 📄 Sheet 3: Test Cases         # 225 Formatted Card-Style Test Cases
@@ -200,7 +200,7 @@ Bangladesh_Railway_Cases_Final_CardStyle.xlsx
    ```
 
 2. **Inspect the Test Artifacts**:
-   - Open [`Bangladesh_Railway_Cases_Final_CardStyle.xlsx`](./Bangladesh_Railway_Cases_Final_CardStyle.xlsx) in Microsoft Excel, WPS Office, or Google Sheets.
+   - Open [`Bangladesh_Railway_Test_Cases, Upadated.xlsx`](./Bangladesh_Railway_Test_Cases,%20Upadated.xlsx) in Microsoft Excel, WPS Office, or Google Sheets.
    - Navigate through the sheet tabs:
      - Check **Test Plan** for governance, entry/exit criteria, and suspension conditions.
      - Review **Mind Map** for the end-to-end component mapping.
