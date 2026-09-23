@@ -1,4 +1,4 @@
-# 🚆 Bangladesh Railway E-Ticketing System — QA Test Suite & Quality Assurance Documentation
+# 🚆 Manual Testing For BANGLADESH Railway Web Application
 
 [![QA Status](https://img.shields.io/badge/QA%20Status-Passed%20(99.56%25)-success?style=for-the-badge&logo=checkmarx)](https://eticket.railway.gov.bd)
 [![Total Test Cases](https://img.shields.io/badge/Total%20Test%20Cases-225-blue?style=for-the-badge&logo=testrail)](#-test-execution-summary--metrics)
@@ -176,10 +176,10 @@ Form accepts blank input data, bypasses captcha validation, and redirects to the
 ## 📑 Test Deliverables Structure
 
 The testing deliverables are available in the updated repository workbook:  
-[`Bangladesh_Railway_Test_Cases, Upadated.xlsx`](./Bangladesh_Railway_Test_Cases,%20Upadated.xlsx)
+[`Manual Testing For BANGLADESH Railway Web Application.xlsx`](./Manual%20Testing%20For%20BANGLADESH%20Railway%20Web%20Application.xlsx)
 
 ```
-Bangladesh_Railway_Test_Cases, Upadated.xlsx
+Manual Testing For BANGLADESH Railway Web Application.xlsx
 ├── 📄 Sheet 1: Test Plan          # IEEE 829 Compliant Test Strategy & Scope
 ├── 📄 Sheet 2: Mind Map           # Visual System Architecture & Flow Diagram
 ├── 📄 Sheet 3: Test Cases         # 225 Formatted Card-Style Test Cases
@@ -195,12 +195,12 @@ Bangladesh_Railway_Test_Cases, Upadated.xlsx
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/TanzimSQA/bangladesh-railway-qa-test-cases.git
-   cd bangladesh-railway-qa-test-cases
+   git clone https://github.com/TanzimSQA/Manual-Testing-For-BANGLADESH-Railway-Web-Application.git
+   cd Manual-Testing-For-BANGLADESH-Railway-Web-Application
    ```
 
 2. **Inspect the Test Artifacts**:
-   - Open [`Bangladesh_Railway_Test_Cases, Upadated.xlsx`](./Bangladesh_Railway_Test_Cases,%20Upadated.xlsx) in Microsoft Excel, WPS Office, or Google Sheets.
+   - Open [`Manual Testing For BANGLADESH Railway Web Application.xlsx`](./Manual%20Testing%20For%20BANGLADESH%20Railway%20Web%20Application.xlsx) in Microsoft Excel, WPS Office, or Google Sheets.
    - Navigate through the sheet tabs:
      - Check **Test Plan** for governance, entry/exit criteria, and suspension conditions.
      - Review **Mind Map** for the end-to-end component mapping.
